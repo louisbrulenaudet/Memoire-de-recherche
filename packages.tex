@@ -1,0 +1,79 @@
+% -*- coding: utf-8 -*-
+% Preamble
+\documentclass[french, 12pt]{report}
+	\usepackage[utf8]{inputenc}
+	\usepackage{url}
+	\usepackage{float}
+	\usepackage{amssymb}
+	\usepackage{amsmath}
+	\usepackage{fontspec}
+	\usepackage{hyperref}
+	\usepackage{setspace}
+	\usepackage{amsfonts}
+	\usepackage{graphicx}
+	\usepackage{listings}
+	\usepackage{bibentry}
+	\usepackage{tocloft}
+	\usepackage{pgfplots}
+	\usepackage{titlesec}
+	\usepackage{afterpage}
+	\usepackage[T1]{fontenc}	
+	\usepackage[round]{natbib}
+	\usepackage[french]{babel}
+	\usepackage[acronym]{glossaries}
+	\title{Algorithmisation des modèles de confiance et performativité du système socio-fiscal : vers un paradigme disruptif pour l'appréhension des actifs numériques}
+	\author{Louis Brulé Naudet\thanks{Université Paris-Dauphine}}
+	\date{\today}
+
+% Set parameters
+\setcounter{page}{0}
+\hypersetup{linktoc=all}
+
+% Define style for programming displays
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, const, let},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+  language=JavaScript,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+}
+
+\addtolength{\skip\footins}{0.6pc}
+\renewcommand*\footnoterule{} %Footnode separator line
+
+\def\siecle#1{\textsc{\romannumeral #1}\textsuperscript{e}~siècle}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %places dots on sections lines as well
+
+\cftsetindents{section}{0pt}{4em}
+\cftsetindents{subsection}{10pt}{4em}
+\cftsetindents{subsubsection}{20pt}{4em}
+\cftsetindents{paragraph}{30pt}{4em}
+\cftsetindents{subparagraph}{40pt}{4em}
+\def\cftdotsep{1}
+\cftsetpnumwidth{1em}
+
+\renewcommand{\cftchapafterpnum}{\vspace{\cftbeforechapskip}}
+
+\newcommand\emptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+
+
