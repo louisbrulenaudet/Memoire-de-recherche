@@ -1,0 +1,82 @@
+% -*- coding: utf-8 -*-
+% Set parameters
+\setcounter{page}{0}
+\hypersetup{linktoc=all}
+
+% Define style for programming displays
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, const, let},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+  language=JavaScript,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+}
+
+%Footnode separator line
+\addtolength{\skip\footins}{0.6pc}
+\renewcommand*\footnoterule{} 
+
+\def\siecle#1{\textsc{\romannumeral #1}\textsuperscript{e}~siècle}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %places dots on sections lines as well
+
+\renewcommand{\cftchapafterpnum}{\vspace{\cftbeforechapskip}}
+
+\newcommand\emptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+
+\pgfplotsset{compat=1.15}
+
+\newcounter{mypara}
+\setcounter{mypara}{0}
+
+% Make Glossaries
+\makeglossaries
+\input{partials/acronymes.tex}
+\input{partials/glossaire.tex}
+\setcounter{secnumdepth}{4}
+
+
+% Table of contents format
+
+\cftsetindents{section}{0pt}{4em}
+\cftsetindents{subsection}{10pt}{4em}
+\cftsetindents{subsubsection}{20pt}{4em}
+\cftsetindents{paragraph}{30pt}{4em}
+\cftsetindents{subparagraph}{40pt}{4em}
+\def\cftdotsep{1}
+\cftsetpnumwidth{1em}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\chapter}
+ {\normalfont\fontsize{21}{23}\mdseries}{\thechapter}{1em}{}
+\titleformat{\section}
+  {\normalfont\fontsize{16}{19}\mdseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{17}\mdseries}{\thesubsection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{13}{16}\mdseries}{\thesubsection}{1em}{}
+\titleformat{\paragraph}
+ {\normalfont\fontsize{12}{15}\mdseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}
+ {\normalfont\fontsize{11}{14}\mdseries}{\thesubparagraph}{1em}{}
